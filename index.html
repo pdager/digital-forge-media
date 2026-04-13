@@ -5,96 +5,167 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
-  <meta name="description" content="Digital Forge Media delivers high-performance live broadcast production, content creation, and event operations for gaming, esports, and brands.">
+  <meta name="description" content="High-performance esports broadcast production, live events, and content creation.">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background: #191919;
-      color: white;
-    }
-
-    h1, h2, h3 {
-      margin: 0 0 10px;
+      background: #0f0f0f;
+      color: #f5f5f5;
     }
 
     section {
-      padding: 80px 20px;
-      max-width: 1100px;
+      padding: 100px 20px;
+      max-width: 1200px;
       margin: auto;
     }
 
+    h1 {
+      font-size: 56px;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      opacity: 0.8;
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      opacity: 0.8;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    /* HERO */
     .hero {
       text-align: center;
-      padding: 120px 20px;
+      padding: 140px 20px;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
     }
 
     .hero h1 {
-      font-size: 48px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
 
     .hero p {
-      margin: 20px auto;
       max-width: 600px;
-      opacity: 0.8;
+      margin: 20px auto;
     }
 
+    /* BUTTONS */
     .btn {
-      padding: 14px 24px;
+      padding: 14px 28px;
       margin: 10px;
-      border-radius: 8px;
-      cursor: pointer;
+      border-radius: 10px;
       border: none;
+      cursor: pointer;
       font-weight: bold;
+      transition: 0.3s;
     }
 
     .primary {
       background: #E2FE15;
       color: black;
+      box-shadow: 0 0 20px #E2FE15;
+    }
+
+    .primary:hover {
+      transform: scale(1.05);
     }
 
     .secondary {
       background: transparent;
-      border: 1px solid white;
-      color: white;
+      border: 1px solid #7455F6;
+      color: #7455F6;
     }
 
+    /* GRID */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
     }
 
     .card {
-      background: #222;
-      padding: 20px;
-      border-radius: 12px;
+      background: linear-gradient(145deg, #1a1a1a, #111);
+      padding: 25px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: 0.3s;
     }
 
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #7455F6;
+      box-shadow: 0 0 20px rgba(116,85,246,0.3);
+    }
+
+    /* SECTION ALT */
     .dark {
-      background: #111;
+      background: #0a0a0a;
     }
 
+    /* CTA */
     .cta {
       text-align: center;
     }
 
+    /* FORM */
     input, textarea {
       width: 100%;
-      padding: 12px;
+      padding: 14px;
       margin: 10px 0;
-      border-radius: 6px;
+      border-radius: 8px;
       border: none;
-      background: #222;
+      background: #1a1a1a;
       color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      opacity: 0.5;
     }
   </style>
 </head>
 
 <body>
+
+<!-- NAV -->
+<nav>
+  <div><strong>Digital Forge</strong></div>
+  <div>
+    <a href="#">Services</a>
+    <a href="#">Work</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -104,35 +175,25 @@
   <button class="btn secondary">View Work</button>
 </section>
 
-<!-- TRUST -->
-<section>
-  <div class="grid">
-    <div>10+ Years Experience</div>
-    <div>Scalable Production</div>
-    <div>Cost-Efficient Workflows</div>
-    <div>Gaming-Native Team</div>
-  </div>
-</section>
-
 <!-- SERVICES -->
 <section>
   <h2>What We Do</h2>
   <div class="grid">
     <div class="card">
       <h3>Live Broadcast</h3>
-      <p>Turnkey production designed for high-performance live environments.</p>
+      <p>Turnkey production engineered for high-performance live environments.</p>
     </div>
     <div class="card">
       <h3>Graphic Design</h3>
-      <p>Custom overlays and visuals built for broadcast impact.</p>
+      <p>Custom overlays and broadcast visuals built to stand out.</p>
     </div>
     <div class="card">
       <h3>Replay & Observing</h3>
       <p>Capture every moment with precision replay systems.</p>
     </div>
     <div class="card">
-      <h3>Live Event Operations</h3>
-      <p>End-to-end execution for seamless live experiences.</p>
+      <h3>Live Event Ops</h3>
+      <p>Flawless execution from setup to final broadcast.</p>
     </div>
   </div>
 </section>
@@ -141,26 +202,26 @@
 <section class="dark">
   <h2>Why Digital Forge</h2>
   <div class="grid">
-    <div>
-      <h3>Bespoke Solutions</h3>
-      <p>No templates. Built for your needs.</p>
+    <div class="card">
+      <h3>Bespoke Systems</h3>
+      <p>Every production is custom built.</p>
     </div>
-    <div>
-      <h3>Scalable Production</h3>
-      <p>From remote to arena-scale.</p>
+    <div class="card">
+      <h3>Scalable</h3>
+      <p>From remote shows to arena-scale events.</p>
     </div>
-    <div>
+    <div class="card">
       <h3>Cost Efficient</h3>
-      <p>High-end output without overhead.</p>
+      <p>High-end results without bloated budgets.</p>
     </div>
-    <div>
-      <h3>Proven Under Pressure</h3>
-      <p>We deliver when it matters.</p>
+    <div class="card">
+      <h3>Proven</h3>
+      <p>Battle-tested in real-world environments.</p>
     </div>
   </div>
 </section>
 
-<!-- CASE STUDY -->
+<!-- CASE STUDIES -->
 <section>
   <h2>Proven Results</h2>
   <div class="grid">
@@ -170,7 +231,7 @@
     </div>
     <div class="card">
       <h3>Brawl Stars Growth</h3>
-      <p>Millions of additional views across social platforms.</p>
+      <p>Millions of additional views across platforms.</p>
     </div>
   </div>
 </section>
@@ -191,6 +252,10 @@
     <button class="btn primary">Submit</button>
   </form>
 </section>
+
+<footer>
+  © 2026 Digital Forge Media
+</footer>
 
 </body>
 </html>
