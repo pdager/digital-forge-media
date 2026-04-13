@@ -16,32 +16,32 @@
       color: #f5f5f5;
     }
 
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: rgba(0,0,0,0.7);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      opacity: 0.8;
+    }
+
     section {
       padding: 100px 20px;
       max-width: 1200px;
       margin: auto;
     }
 
-    h1 { font-size: 56px; }
-    h2 { font-size: 36px; margin-bottom: 20px; }
-    p { opacity: 0.8; line-height: 1.6; }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px 40px;
-      position: sticky;
-      top: 0;
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(10px);
-    }
-
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: white;
-      opacity: 0.8;
-    }
+    h1 { font-size: 52px; text-align: center; }
+    h2 { font-size: 34px; margin-bottom: 20px; }
+    p { opacity: 0.8; }
 
     .hero {
       text-align: center;
@@ -66,55 +66,68 @@
     .primary {
       background: #E2FE15;
       color: black;
-      box-shadow: 0 0 20px #E2FE15;
+      box-shadow: 0 0 15px #E2FE15;
     }
 
     .secondary {
-      background: transparent;
       border: 1px solid #7455F6;
       color: #7455F6;
+      background: transparent;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 25px;
     }
 
     .card {
-      background: linear-gradient(145deg, #1a1a1a, #111);
-      padding: 25px;
-      border-radius: 16px;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 14px;
       border: 1px solid rgba(255,255,255,0.05);
-      transition: 0.3s;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #7455F6;
-      box-shadow: 0 0 20px rgba(116,85,246,0.3);
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
     }
 
-    .dark {
-      background: #0a0a0a;
-    }
-
-    /* PORTFOLIO */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
     }
 
-    .gallery img {
-      width: 100%;
+    .project {
+      position: relative;
+      overflow: hidden;
       border-radius: 16px;
+    }
+
+    .project img {
+      width: 100%;
+      display: block;
       transition: 0.4s;
     }
 
-    .gallery img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 25px rgba(226,254,21,0.3);
+    .project:hover img {
+      transform: scale(1.05);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .project:hover .overlay {
+      opacity: 1;
     }
 
     input, textarea {
@@ -158,36 +171,64 @@
 <!-- SERVICES -->
 <section id="services">
   <h2>What We Do</h2>
+
   <div class="grid">
-    <div class="card"><h3>Live Broadcast</h3><p>Turnkey production engineered for performance.</p></div>
-    <div class="card"><h3>Graphic Design</h3><p>Custom overlays and broadcast visuals.</p></div>
-    <div class="card"><h3>Replay & Observing</h3><p>Precision replay systems and coverage.</p></div>
-    <div class="card"><h3>Live Event Ops</h3><p>Flawless execution from setup to showtime.</p></div>
+
+    <div class="card">
+      <img src="Remote-setup.png">
+      <h3>Live Broadcast</h3>
+      <p>Turnkey production engineered for high-performance live environments.</p>
+    </div>
+
+    <div class="card">
+      <img src="Fortnite-show.png">
+      <h3>Live Event Production</h3>
+      <p>From remote setups to full-scale esports events, we deliver flawless execution.</p>
+    </div>
+
+    <div class="card">
+      <h3>Graphic Design</h3>
+      <p>Custom overlays, broadcast packages, and branded visuals built for impact.</p>
+    </div>
+
+    <div class="card">
+      <h3>Replay & Observing</h3>
+      <p>Capture every moment with precision replay systems and in-game coverage.</p>
+    </div>
+
   </div>
 </section>
 
-<!-- PORTFOLIO -->
+<!-- WORK -->
 <section id="work">
   <h2>Our Work</h2>
-  <div class="gallery">
-    <img src="control room.png">
-    <img src="fornite show.png">
-    <img src="tipped off.png">
-    <img src="ZS__4720.jpg">
-    <img src="ZS__4730.jpg">
-    <img src="ZS__4733.jpg">
-    <img src="ZS__4754.jpg">
-  </div>
-</section>
 
-<!-- DIFFERENTIATION -->
-<section class="dark">
-  <h2>Why Digital Forge</h2>
-  <div class="grid">
-    <div class="card"><h3>Bespoke Systems</h3><p>Every production is custom built.</p></div>
-    <div class="card"><h3>Scalable</h3><p>From remote to arena-scale events.</p></div>
-    <div class="card"><h3>Cost Efficient</h3><p>High-end results without bloated budgets.</p></div>
-    <div class="card"><h3>Proven</h3><p>Battle-tested in real-world environments.</p></div>
+  <div class="gallery">
+
+    <div class="project">
+      <img src="Monster-venue.jpg">
+      <div class="overlay">
+        <h3>Monster Energy Arena</h3>
+        <p>Large-Scale Live Event Production</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="Monster-stage.jpg">
+      <div class="overlay">
+        <h3>Monster Stage Broadcast</h3>
+        <p>Multi-Camera Production</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="Tipped-auth.png">
+      <div class="overlay">
+        <h3>Tipped Off Event</h3>
+        <p>Esports Community Broadcast</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
