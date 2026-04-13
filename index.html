@@ -41,38 +41,17 @@
 
     h1 { font-size: 52px; text-align: center; }
     h2 { font-size: 34px; margin-bottom: 20px; }
-    p { opacity: 0.8; }
+    p { opacity: 0.8; line-height: 1.6; }
 
     .hero {
       text-align: center;
-      padding: 140px 20px;
+      padding: 160px 20px;
       background: radial-gradient(circle at top, #1a1a1a, #000);
     }
 
     .hero p {
       max-width: 600px;
       margin: 20px auto;
-    }
-
-    .btn {
-      padding: 14px 28px;
-      margin: 10px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .primary {
-      background: #E2FE15;
-      color: black;
-      box-shadow: 0 0 15px #E2FE15;
-    }
-
-    .secondary {
-      border: 1px solid #7455F6;
-      color: #7455F6;
-      background: transparent;
     }
 
     .grid {
@@ -130,6 +109,30 @@
       opacity: 1;
     }
 
+    /* ABOUT SECTION */
+    .about {
+      max-width: 800px;
+      margin-bottom: 60px;
+    }
+
+    .team-card {
+      text-align: center;
+    }
+
+    .team-card img {
+      width: 100%;
+      max-width: 220px;
+      margin: 0 auto 15px;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .role {
+      color: #E2FE15;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
     input, textarea {
       width: 100%;
       padding: 14px;
@@ -156,6 +159,7 @@
   <div>
     <a href="#services">Services</a>
     <a href="#work">Work</a>
+    <a href="#about">About Us</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -164,8 +168,6 @@
 <section class="hero">
   <h1>Broadcasts That Don’t Just Look Good — They Perform</h1>
   <p>Bespoke broadcasts from an agile and innovative team serving gaming, esports, and live events.</p>
-  <button class="btn primary">Get a Quote</button>
-  <button class="btn secondary">View Work</button>
 </section>
 
 <!-- SERVICES -->
@@ -232,18 +234,28 @@
   </div>
 </section>
 
-<!-- TEAM -->
-<section id="team">
-  <h2>Leadership</h2>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Us</h2>
+
+  <div class="about">
+    <p>
+      Digital Forge Media was founded to deliver high-performance broadcast solutions tailored for the modern gaming and esports industry. Built by industry veterans, the company combines deep competitive gaming experience with advanced production expertise to create scalable, high-impact live experiences.
+    </p>
+
+    <p>
+      From remote productions to arena-scale events, Digital Forge Media operates as an agile partner for brands, publishers, and esports organizations looking to elevate their broadcasts.
+    </p>
+  </div>
 
   <div class="grid">
 
     <div class="card team-card">
-      <img src="peter-dager.jpeg">
+      <img src="peter-dageer.jpeg">
       <h3>Peter Dager</h3>
       <p class="role">Co-Founder</p>
       <p>
-        Former professional esports champion and executive leader, bringing deep experience in competitive gaming and organizational strategy.
+        Former professional esports champion and executive leader with deep experience across competitive gaming and team operations.
       </p>
     </div>
 
@@ -252,14 +264,13 @@
       <h3>Will Oscar</h3>
       <p class="role">Co-Founder</p>
       <p>
-        Industry veteran in broadcast production, specializing in live operations, observing systems, and large-scale event execution.
+        Broadcast production specialist with extensive experience in live operations, observing systems, and large-scale event execution.
       </p>
     </div>
 
   </div>
 </section>
 
-  
 <!-- CONTACT -->
 <section id="contact">
   <h2>Get in Touch</h2>
@@ -267,7 +278,7 @@
     <input type="text" name="name" placeholder="Name" required>
     <input type="email" name="email" placeholder="Email" required>
     <textarea name="message" placeholder="Tell us about your project"></textarea>
-    <button class="btn primary">Submit</button>
+    <button style="padding:14px 28px; background:#E2FE15; border:none; border-radius:8px;">Submit</button>
   </form>
 </section>
 
