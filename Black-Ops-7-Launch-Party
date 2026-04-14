@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Black Ops 7 Launch Party | Digital Forge Media</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #0a0a0a;
+      color: #f5f5f5;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: rgba(0,0,0,0.8);
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      opacity: 0.8;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 48px;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    h1 span {
+      color: #E2FE15;
+    }
+
+    p {
+      opacity: 0.8;
+      text-align: center;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .case-tag {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #7455F6, #9b7bff);
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .stat-box {
+      border: 1px solid rgba(226,254,21,0.5);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .stat-box h2 {
+      font-size: 48px;
+      color: #E2FE15;
+      margin: 10px 0;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div><strong>Digital Forge Media</strong></div>
+  <div>
+    <a href="index.html">Home</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>
+    Producing <span>Black Ops 7</span><br>
+    Launch Party
+  </h1>
+
+  <p>
+    A high-impact live broadcast production bringing together creators,
+    athletes, and fans for a premier Call of Duty community experience.
+  </p>
+
+  <div class="case-tag">CASE STUDY</div>
+</section>
+
+<!-- CONTENT -->
+<section>
+
+  <div class="stats">
+
+    <!-- LEFT SIDE -->
+    <div>
+      <p style="text-align:left;">
+        Viewership steadily increased throughout the broadcast, with strong engagement
+        and above-average chat interaction across the entire stream. The production
+        successfully operated within a constrained environment while maintaining
+        high broadcast quality and audience retention.
+      </p>
+
+      <div class="gallery">
+        <img src="Monster-venue.jpg">
+        <img src="Monster-stage.jpg">
+        <img src="Fortnite-show.png">
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="stat-box">
+      <h2>&gt;900K</h2>
+      <p>minutes watched</p>
+      <p>in a</p>
+      <h2>2hr</h2>
+      <p>live stream</p>
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>
