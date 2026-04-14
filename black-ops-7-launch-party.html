@@ -7,28 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    #lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  cursor: pointer;
-}
-
-#lightbox img {
-  max-width: 90%;
-  max-height: 85%;
-  border-radius: 12px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.8);
-}
-
-    
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
@@ -41,8 +19,6 @@
       justify-content: space-between;
       padding: 20px 40px;
       background: rgba(0,0,0,0.8);
-      position: sticky;
-      top: 0;
     }
 
     nav a {
@@ -68,11 +44,26 @@
       color: #E2FE15;
     }
 
+    h2 {
+      margin-top: 40px;
+      font-size: 28px;
+    }
+
     p {
-      opacity: 0.8;
+      opacity: 0.85;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 10px;
+      line-height: 1.6;
+      opacity: 0.85;
+    }
+
+    .hero {
       text-align: center;
-      max-width: 800px;
-      margin: 20px auto;
+      padding: 120px 20px;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
     }
 
     .case-tag {
@@ -84,58 +75,59 @@
       font-weight: bold;
     }
 
-    .hero {
-      text-align: center;
-      padding: 120px 20px;
-      background: radial-gradient(circle at top, #1a1a1a, #000);
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 40px;
-      margin-top: 60px;
-    }
-
-    .stat-box {
-      border: 1px solid rgba(226,254,21,0.5);
-      border-radius: 16px;
-      padding: 30px;
-      text-align: center;
-    }
-
-    .stat-box h2 {
-      font-size: 48px;
+    .highlight {
       color: #E2FE15;
-      margin: 10px 0;
+      font-weight: 600;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
-      margin-top: 30px;
+      margin-top: 40px;
     }
 
     .gallery img {
       width: 100%;
-      border-radius: 12px;
-      transition: 0.3s;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
     }
 
     .gallery img:hover {
       transform: scale(1.03);
     }
 
-    /* MOBILE */
-    @media (max-width: 768px) {
-      .stats {
-        grid-template-columns: 1fr;
-      }
+    /* LIGHTBOX */
+    #lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      cursor: pointer;
+    }
 
-      h1 {
-        font-size: 34px;
-      }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 12px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 60px;
+      color: #E2FE15;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 32px; }
     }
 
   </style>
@@ -148,20 +140,16 @@
   <div><strong>Digital Forge Media</strong></div>
   <div>
     <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <h1>
-    Producing <span>Black Ops 7</span><br>
-    Launch Party
+    Call of Duty: <span>Black Ops 7</span><br>
+    Launch @ The USS Intrepid
   </h1>
-
-  <p>
-    A high-impact live broadcast production bringing together creators,
-    athletes, and fans for a premier Call of Duty community experience.
-  </p>
 
   <div class="case-tag">CASE STUDY</div>
 </section>
@@ -169,44 +157,61 @@
 <!-- CONTENT -->
 <section>
 
-  <div class="stats">
+  <h2>The Mission</h2>
+  <p>
+    Digital Forge Media (DFM) was commissioned to produce a high-impact live broadcast for the premier launch of Call of Duty: Black Ops 7. Hosted aboard the historic USS Intrepid in New York City, the event served as the official pre-party for a major UFC fight night—bridging the worlds of elite gaming, professional athletics, and creator culture.
+  </p>
 
-    <!-- LEFT SIDE -->
-    <div>
-      <p style="text-align:left;">
-        Viewership steadily increased throughout the broadcast, with strong engagement
-        and above-average chat interaction across the entire stream. The production
-        successfully operated within a constrained environment while maintaining
-        high broadcast quality and audience retention.
-      </p>
+  <h2>Strategic Execution</h2>
+  <p>
+    DFM orchestrated a high-energy show featuring a diverse roster of personalities including <span class="highlight">Alex Pereira</span>, <span class="highlight">HECZ</span>, <span class="highlight">TeeP</span>, <span class="highlight">HusKerrs</span>, and <span class="highlight">Matt Berger</span>.
+  </p>
 
-      <div class="gallery">
-  <img src="monster-venue.jpg" onclick="openLightbox(this.src)">
-  <img src="monster-stage.jpg" onclick="openLightbox(this.src)">
-  <img src="monster-screen.jpg" onclick="openLightbox(this.src)">
-  <img src="monster-screen2.jpg" onclick="openLightbox(this.src)">
-</div>
+  <p>
+    Operating within a non-traditional venue introduced significant logistical challenges. To solve this, DFM deployed a <span class="highlight">mobile-first load-in strategy</span>, transporting all broadcast gear via backpacks and Pelican cases.
+  </p>
 
-    </div>
+  <p>
+    By eliminating the need for crane lifts and heavy rigging, the team gained critical hours for technical rehearsals and network stress testing—ultimately achieving <span class="highlight">100% uptime</span> during the live broadcast.
+  </p>
 
-    <!-- RIGHT SIDE -->
-    <div class="stat-box">
-      <h2>&gt;900K</h2>
-      <p>minutes watched</p>
-      <p>in a</p>
-      <h2>2hr</h2>
-      <p>live stream</p>
-    </div>
+  <p>
+    The production also required seamless integration between internal broadcast systems and venue infrastructure, with close coordination between Monster Energy Events and on-site staff.
+  </p>
 
+  <h2>Impact & Performance</h2>
+
+  <p>
+    The broadcast delivered strong performance across all key metrics:
+  </p>
+
+  <ul>
+    <li><span class="highlight">Audience Growth:</span> Steady upward trend in live viewership throughout the event</li>
+    <li><span class="highlight">High Engagement:</span> Above-average chat interaction driven by live banter and interviews</li>
+    <li><span class="highlight">Versatile Delivery:</span> Balanced raw live energy with polished "live-to-tape" segments</li>
+  </ul>
+
+  <p style="margin-top:30px;">
+    The result was a seamless, high-energy broadcast that successfully merged gaming, sports, and creator culture into a single premium live experience.
+  </p>
+
+  <!-- GALLERY -->
+  <div class="gallery">
+    <img src="monster-venue.jpg" onclick="openLightbox(this.src)">
+    <img src="monster-stage.jpg" onclick="openLightbox(this.src)">
+    <img src="monster-screen.jpg" onclick="openLightbox(this.src)">
   </div>
 
+  <a href="work.html" class="back-link">← Back to Work</a>
+
 </section>
-  
+
 <!-- LIGHTBOX -->
 <div id="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img">
+</div>
 
-  <script>
+<script>
   function openLightbox(src) {
     document.getElementById("lightbox").style.display = "flex";
     document.getElementById("lightbox-img").src = src;
@@ -216,9 +221,6 @@
     document.getElementById("lightbox").style.display = "none";
   }
 </script>
-
-  
-</div>
 
 </body>
 </html>
