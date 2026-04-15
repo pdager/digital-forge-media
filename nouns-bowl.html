@@ -1,1 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nouns Bowl | Digital Forge Media</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #0a0a0a;
+      color: #f5f5f5;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: rgba(0,0,0,0.8);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      opacity: 0.8;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 48px;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    h1 span {
+      color: #E2FE15;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 28px;
+    }
+
+    p {
+      opacity: 0.85;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 10px;
+      opacity: 0.85;
+      line-height: 1.6;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+    }
+
+    .case-tag {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #7455F6, #9b7bff);
+      font-weight: bold;
+    }
+
+    .highlight {
+      color: #E2FE15;
+      font-weight: 600;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    /* LIGHTBOX */
+    #lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      cursor: pointer;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 12px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 60px;
+      color: #E2FE15;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 32px; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div><strong>Digital Forge Media</strong></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>
+    <span>Nouns Bowl</span><br>
+    Live Broadcast Production
+  </h1>
+
+  <div class="case-tag">CASE STUDY</div>
+</section>
+
+<!-- CONTENT -->
+<section>
+
+  <!-- MISSION -->
+  <h2>The Mission</h2>
+  <p>
+    <!-- WRITE THIS -->
+    Digital Forge Media was brought in to support the Nouns Bowl broadcast, delivering a high-quality live production that blended competitive gameplay with creator-driven storytelling.
+  </p>
+
+  <!-- EXECUTION -->
+  <h2>Strategic Execution</h2>
+  <p>
+    <!-- WRITE THIS -->
+    The production required a flexible broadcast setup capable of adapting to evolving show segments, live gameplay, and talent integration.
+  </p>
+
+  <ul>
+    <li><span class="highlight">Live Broadcast:</span> End-to-end production support across multiple segments</li>
+    <li><span class="highlight">Talent Integration:</span> Coordinated gameplay, commentary, and live interactions</li>
+    <li><span class="highlight">Technical Execution:</span> Maintained stable, high-quality output across the broadcast</li>
+  </ul>
+
+  <!-- IMPACT -->
+  <h2>Impact & Performance</h2>
+  <p>
+    <!-- WRITE THIS -->
+    The Nouns Bowl broadcast delivered a seamless viewing experience, combining competitive intensity with engaging creator moments to maintain audience interest throughout the event.
+  </p>
+
+  <p style="margin-top:30px;">
+    The result was a polished and adaptable broadcast that elevated the event’s presentation while maintaining the authenticity of the community.
+  </p>
+
+  <!-- GALLERY -->
+  <div class="gallery">
+    <!-- REPLACE THESE WITH YOUR IMAGES -->
+    <img src="caster-desk.png" onclick="openLightbox(this.src)">
+    <img src="interview-joshman.png" onclick="openLightbox(this.src)">
+    <img src="winner-shot.png" onclick="openLightbox(this.src)">
+  </div>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<script>
+  function openLightbox(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
 
