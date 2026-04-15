@@ -295,6 +295,79 @@ footer {
   transform: translateY(-4px);
 }
 
+    .about-section {
+  padding: 100px 20px;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-text h2 {
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 16px;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+.about-highlight {
+  color: #E2FE15;
+  font-weight: bold;
+}
+
+/* FOUNDERS */
+.about-founders {
+  display: flex;
+  gap: 20px;
+}
+
+.founder-card {
+  flex: 1;
+  text-align: center;
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s;
+}
+
+.founder-card img {
+  width: 100%;
+  max-width: 160px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.founder-card span {
+  color: #E2FE15;
+  font-size: 14px;
+}
+
+/* subtle hover */
+.founder-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(226,254,21,0.15);
+}
+
+/* MOBILE FIX */
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-founders {
+    justify-content: center;
+  }
+}
+
   </style>
 </head>
 
@@ -389,61 +462,54 @@ footer {
 </section>
 
 <!-- ABOUT -->
-<section id="about">
-  <h2>About Us</h2>
+<section id="about" class="about-section">
 
-  <p>
-    Digital Forge Media was founded in 2024 with a simple goal: to take control of the work we create and the standards we deliver.
-    After years of experience across esports, live production, and broadcast operations, we set out to build something of our own—an agile, high-performance team capable of executing at the highest level without compromise.
-  </p>
+  <div class="about-container">
 
-  <p>
-    Today, Digital Forge Media operates at the intersection of gaming, live production, and creator culture—delivering bespoke broadcast and content solutions built for performance. We expand to meet the moment, lean into what we do best, and stay transparent every step of the way.
-  </p>
+    <!-- LEFT SIDE (TEXT) -->
+    <div class="about-text">
+      <h2>About Us</h2>
 
-  <p>
-    Our strength comes from both experience and network. With deep industry roots and a trusted roster of collaborators, we are able to assemble world-class teams tailored to each project—scaling up or down depending on the scope and needs of our partners.
-  </p>
-
-  <p>
-    From day one, we’ve taken a measured approach to growth—investing in new equipment, refining our workflows, and continuously leveling up our capabilities based on the work in front of us. This allows us to right-size every production while maintaining a premium standard of execution.
-  </p>
-
-  <p>
-    We pride ourselves on being fast, flexible, and solutions-driven. Whenever possible, we prioritize speed in quoting and clarity in communication, ensuring our partners can move quickly and confidently.
-  </p>
-
-  <p>
-    At the same time, we believe great work comes from honesty. We provide as many services and solutions as possible, but we are deliberate about staying within our strengths. When a project calls for additional expertise, we collaborate with trusted specialists to ensure the final product meets the highest standard.
-  </p>
-
-  <p>
-    If it’s not an A+, we don’t put it out.
-  </p>
-
-</section>
-
-  <div class="grid">
-
-    <div class="card team-card">
-      <img src="peter-dager.png">
-      <h3>Peter Dager</h3>
-      <p class="role">Co-Founder</p>
       <p>
-        Former professional esports champion and executive leader with deep experience across competitive gaming and team operations.
+        Digital Forge Media was founded in 2024 with a simple goal: to take control of the work we create and the standard we deliver.
+      </p>
+
+      <p>
+        Operating at the intersection of gaming, live production, and creator culture, we build high-performance broadcasts designed to scale with each project.
+      </p>
+
+      <p>
+        With deep industry experience and a trusted network, we assemble the right team for every job—expanding when needed, staying lean when it matters.
+      </p>
+
+      <p>
+        We move fast, stay transparent, and focus on what we do best. When a project demands more, we collaborate with specialists to ensure every deliverable meets the highest standard.
+      </p>
+
+      <p class="about-highlight">
+        If it’s not an A+, we don’t put it out.
       </p>
     </div>
 
-    <div class="card team-card">
-      <img src="will-oscar.png">
-      <h3>Will Oscar</h3>
-      <p class="role">Co-Founder</p>
-      <p>
-        Broadcast production specialist with extensive experience in live operations, observing systems, and large-scale event execution.
-      </p>
+    <!-- RIGHT SIDE (FOUNDERS) -->
+    <div class="about-founders">
+
+      <div class="founder-card">
+        <img src="peter-dager.png">
+        <h3>Peter Dager</h3>
+        <span>Co-Founder</span>
+      </div>
+
+      <div class="founder-card">
+        <img src="will-oscar.png">
+        <h3>Will Oscar</h3>
+        <span>Co-Founder</span>
+      </div>
+
     </div>
 
   </div>
+
 </section>
 
 <!-- CONTACT -->
