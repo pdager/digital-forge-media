@@ -3,17 +3,27 @@
 <head>
   <title>Digital Forge Media | Esports Broadcast Production</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta name="description" content="High-performance esports broadcast production, live events, and content creation.">
 
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    body {
+/* BASE */
+body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   background: #0a0a0a;
   color: #f5f5f5;
+}
+
+/* GLOBAL LINK FIX */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
 }
 
 /* NAVBAR */
@@ -29,57 +39,19 @@ nav {
 }
 
 nav a {
-  color: white;
   margin-left: 25px;
-  text-decoration: none;
   font-weight: 500;
   opacity: 0.8;
+  transition: 0.3s ease;
 }
 
 nav a:hover {
   color: #E2FE15;
+  opacity: 1;
 }
 
-/* HERO */
-.hero {
-  position: relative;
-  text-align: center;
-  padding: 180px 20px;
-  background: radial-gradient(circle at center, #1a1a1a, #000);
-  overflow: hidden;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(116,85,246,0.3), transparent);
-  top: -200px;
-  left: 50%;
-  transform: translateX(-50%);
-  filter: blur(120px);
-}
-
-.hero h1 {
-  font-size: 64px;
-  max-width: 900px;
-  margin: auto;
-  line-height: 1.1;
-}
-
-.hero h1 span {
-  color: #E2FE15;
-}
-
-.hero p {
-  max-width: 600px;
-  margin: 20px auto;
-  font-size: 18px;
-  opacity: 0.85;
-}
-
-    .hero-image {
+/* HERO IMAGE */
+.hero-image {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -95,8 +67,6 @@ nav a:hover {
 
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.2);
@@ -121,44 +91,34 @@ h2 {
   gap: 30px;
 }
 
-/* CARD BASE */
+/* CARDS */
 .card {
   background: linear-gradient(145deg, #111, #0a0a0a);
   padding: 20px;
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.05);
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
   overflow: hidden;
 }
 
-/* IMAGE */
 .services-grid .card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
-  transition: transform 0.4s ease;
-}
-    
-.team-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin-bottom: 15px;
+  transition: 0.3s ease;
 }
 
-/* IMAGE ZOOM */
 .card:hover img {
   transform: scale(1.05);
 }
 
-/* HOVER STATE */
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 
-    0 0 0 1px rgba(226,254,21,0.6),   /* crisp border */
-    0 0 20px rgba(226,254,21,0.25);   /* soft glow */
+    0 0 0 1px rgba(226,254,21,0.6),
+    0 0 20px rgba(226,254,21,0.25);
 }
 
 /* GALLERY */
@@ -173,14 +133,19 @@ h2 {
   overflow: hidden;
   border-radius: 16px;
   max-height: 300px;
+  transition: 0.3s ease;
 }
 
 .project img {
   width: 100%;
-  height: 100%;
+  height: 260px;
   object-fit: cover;
   display: block;
-  transition: 0.4s;
+  transition: 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-4px);
 }
 
 .project:hover img {
@@ -194,108 +159,20 @@ h2 {
   padding: 20px;
   background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
   opacity: 0;
-  transition: 0.3s;
-  z-index: 2;
+  transition: 0.3s ease;
 }
-
 
 .project:hover .overlay {
   opacity: 1;
 }
 
-/* ABOUT */
-.about {
-  max-width: 800px;
-  margin-bottom: 60px;
-}
-
-/* TEAM */
-.team-card {
-  text-align: center;
-}
-
-.team-card img {
-  width: 100%;
-  max-width: 220px;
-  margin: 0 auto 15px;
-  border-radius: 14px;
-}
-
-.role {
-  color: #E2FE15;
-  font-weight: bold;
-}
-
-/* FORM */
-input, textarea {
-  width: 100%;
-  padding: 14px;
-  margin: 10px 0;
-  border-radius: 10px;
-  border: none;
-  background: #111;
-  color: white;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 50px;
-  opacity: 0.4;
-}
- /* MOBILE HERO FIX */
-@media (max-width: 768px) {
-  .hero-image {
-    height: 55vh;
-  }
-
-  .hero-image img {
-    object-position: center top;
-  }
-}
-
-    /* FORCE UNIFORM CARD IMAGE SIZE */
-.project img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-  transition: 0.4s;
-}
-
-/* FIX PURPLE LINK TEXT */
-.project-link {
-  text-decoration: none;
-  color: white;
-}
-
-.project-link:visited {
-  color: white;
-}
-
-.project-link:hover {
-  color: white;
-}
-
-/* ENSURE OVERLAY TEXT STAYS WHITE */
 .overlay h3,
 .overlay p {
   color: white;
 }
 
-/* OPTIONAL: PREMIUM HOVER LIFT */
-.project {
-  border-radius: 16px;
-  overflow: hidden;
-  position: relative;
-  transition: 0.3s ease;
-}
-
-.project:hover {
-  transform: translateY(-4px);
-}
-
-    .about-section {
+/* ABOUT */
+.about-section {
   padding: 100px 20px;
 }
 
@@ -306,10 +183,6 @@ footer {
   align-items: center;
   max-width: 1200px;
   margin: auto;
-}
-
-.about-text h2 {
-  margin-bottom: 20px;
 }
 
 .about-text p {
@@ -336,7 +209,7 @@ footer {
   padding: 25px;
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.05);
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .founder-card img {
@@ -351,13 +224,40 @@ footer {
   font-size: 14px;
 }
 
-/* subtle hover */
 .founder-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(226,254,21,0.15);
 }
 
-/* MOBILE FIX */
+/* FORM */
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  background: #111;
+  color: white;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 50px;
+  opacity: 0.4;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-image {
+    height: 55vh;
+  }
+
+  .hero-image img {
+    object-position: center top;
+  }
+}
+
 @media (max-width: 900px) {
   .about-container {
     grid-template-columns: 1fr;
@@ -367,7 +267,6 @@ footer {
     justify-content: center;
   }
 }
-
   </style>
 </head>
 
@@ -386,37 +285,35 @@ footer {
 
 <!-- HERO -->
 <section class="hero-image">
-  <img src="hero-image.png" alt="Digital Forge Media Hero">
+  <img src="hero-image.png">
   <div class="hero-overlay"></div>
 </section>
-
 
 <!-- SERVICES -->
 <section id="services">
   <h2>What We Do</h2>
-
   <div class="grid services-grid">
 
     <div class="card">
-      <img src="live-broadcast.png" alt="Live Broadcast">
+      <img src="live-broadcast.png">
       <h3>Live Broadcast</h3>
       <p>Turnkey production engineered for high-performance live environments.</p>
     </div>
 
     <div class="card">
-      <img src="live-event-production.png" alt="Live Event Production">
+      <img src="live-event-production.png">
       <h3>Live Event Production</h3>
       <p>From remote setups to full-scale esports events, we deliver flawless execution.</p>
     </div>
 
     <div class="card">
-      <img src="graphic-example.png" alt="Graphic Design">
+      <img src="graphic-example.png">
       <h3>Graphic Design</h3>
       <p>Custom overlays, broadcast packages, and branded visuals built for impact.</p>
     </div>
 
     <div class="card">
-      <img src="replay-example.png" alt="Replay and Observing">
+      <img src="replay-example.png">
       <h3>Replay & Observing</h3>
       <p>Capture every moment with precision replay systems and in-game coverage.</p>
     </div>
@@ -430,69 +327,57 @@ footer {
 
   <div class="gallery">
 
-    <a href="black-ops-7-launch-party.html" style="text-decoration:none; color:inherit;">
-  <div class="project">
-    <img src="monster-screen2.jpg">
-    <div class="overlay">
-      <h3>Black Ops 7 Launch Party</h3>
-      <p>Live Event Broadcast</p>
-    </div>
-  </div>
-</a>
+    <a href="black-ops-7-launch-party.html">
+      <div class="project">
+        <img src="monster-screen2.jpg">
+        <div class="overlay">
+          <h3>Black Ops 7 Launch Party</h3>
+          <p>Live Event Broadcast</p>
+        </div>
+      </div>
+    </a>
 
     <a href="nouns-bowl.html">
-  <div class="project">
-    <img src="jumbotron.png">
-    <div class="overlay">
-      <h3>Nouns Bowl</h3>
-      <p>Live Broadcast Production</p>
-    </div>
-  </div>
-</a>
-    <a href="the-boys.html" class="project-link">
-  <div class="project">
-    <img src="the-boys-1.png">
-    <div class="overlay">
-      <h3>The Boys Stream</h3>
-      <p>Streaming Show Reactions</p>
-    </div>
-  </div>
-</a>
-    
+      <div class="project">
+        <img src="jumbotron.png">
+        <div class="overlay">
+          <h3>Nouns Bowl</h3>
+          <p>Live Broadcast Production</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="the-boys.html">
+      <div class="project">
+        <img src="the-boys-1.png">
+        <div class="overlay">
+          <h3>The Boys Stream</h3>
+          <p>Streaming Show Reactions</p>
+        </div>
+      </div>
+    </a>
+
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="about-section">
-
   <div class="about-container">
 
-    <!-- LEFT SIDE (TEXT) -->
     <div class="about-text">
       <h2>About Us</h2>
 
-      <p>
-        Digital Forge Media was founded in 2024 with a simple goal: to take control of the work we create and the standard we deliver.
-      </p>
+      <p>Digital Forge Media was founded in 2024 with a simple goal: to take control of the work we create and the standard we deliver.</p>
 
-      <p>
-        Operating at the intersection of gaming, live production, and creator culture, we build high-performance broadcasts designed to scale with each project.
-      </p>
+      <p>Operating at the intersection of gaming, live production, and creator culture, we build high-performance broadcasts designed to scale with each project.</p>
 
-      <p>
-        With deep industry experience and a trusted network, we assemble the right team for every job—expanding when needed, staying lean when it matters.
-      </p>
+      <p>With deep industry experience and a trusted network, we assemble the right team for every job—expanding when needed, staying lean when it matters.</p>
 
-      <p>
-        We move fast, stay transparent, and focus on what we do best. When a project demands more, we collaborate with specialists to ensure every deliverable meets the highest standard.
-      </p>
+      <p>We move fast, stay transparent, and focus on what we do best. When a project demands more, we collaborate with specialists to ensure every deliverable meets the highest standard.</p>
 
-      <p class="about-highlight">
-        If it’s not an A+, we don’t put it out.
-      </p>
+      <p class="about-highlight">If it’s not an A+, we don’t put it out.</p>
     </div>
 
-    <!-- RIGHT SIDE (FOUNDERS) -->
     <div class="about-founders">
 
       <div class="founder-card">
@@ -510,7 +395,6 @@ footer {
     </div>
 
   </div>
-
 </section>
 
 <!-- CONTACT -->
