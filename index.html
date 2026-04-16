@@ -1,98 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Digital Forge Media</title>
+  <title>Digital Forge Media | Esports Broadcast Production</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="High-performance esports broadcast production, live events, and content creation.">
 
+  <!-- FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
 
-<style>
+  <style>
 
-/* BASE */
+/* ================= BASE ================= */
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background: #050505;
+  background: #0a0a0a;
   color: #f5f5f5;
 }
 
-/* TYPOGRAPHY */
 h1, h2, h3 {
   font-family: 'Space Grotesk', sans-serif;
   letter-spacing: -0.5px;
 }
 
 h1 {
-  font-size: 72px;
-  line-height: 1.05;
+  font-size: 64px;
+  line-height: 1.1;
 }
 
 h2 {
-  font-size: 42px;
+  font-size: 40px;
+  margin-bottom: 30px;
 }
 
 p {
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
-/* NAV */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================= NAV ================= */
 nav {
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
   position: sticky;
   top: 0;
+  background: rgba(10,10,10,0.6);
   backdrop-filter: blur(12px);
-  background: rgba(5,5,5,0.6);
   border-bottom: 1px solid rgba(255,255,255,0.05);
-  z-index: 10;
 }
 
 nav a {
   margin-left: 25px;
-  transition: 0.3s;
+  opacity: 0.8;
+  transition: 0.2s ease;
 }
 
 nav a:hover {
   color: #E2FE15;
+  opacity: 1;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
-  position: relative;
-  padding: 160px 20px 120px;
+  padding: 120px 20px 80px;
   text-align: center;
-  overflow: hidden;
-}
-
-/* GLOW BACKGROUND */
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(226,254,21,0.15), transparent 70%);
-  top: -200px;
-  left: 50%;
-  transform: translateX(-50%);
-  filter: blur(120px);
-}
-
-/* GRID TEXTURE */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 30px 30px;
-  opacity: 0.2;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-  margin: auto;
 }
 
 .hero h1 span {
@@ -101,72 +77,31 @@ nav a:hover {
 
 .hero p {
   max-width: 600px;
-  margin: 20px auto;
+  margin: 20px auto 0;
 }
 
-/* BUTTON */
-.cta {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 28px;
-  border-radius: 8px;
-  background: #E2FE15;
-  color: black;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(226,254,21,0.4);
-}
-
-/* SECTION */
+/* ================= SECTIONS ================= */
 section {
-  padding: 120px 20px;
+  padding: 100px 20px;
   max-width: 1200px;
   margin: auto;
 }
 
-/* GRID */
+/* ================= GRID ================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
-/* CARDS (UPGRADED) */
+/* ================= CARDS ================= */
 .card {
-  background: rgba(255,255,255,0.02);
-  border-radius: 18px;
+  background: linear-gradient(145deg, #111, #0a0a0a);
   padding: 20px;
-  border: 1px solid rgba(255,255,255,0.06);
-  backdrop-filter: blur(10px);
-  transition: 0.35s;
-  position: relative;
-  overflow: hidden;
-}
-
-/* GLOW BORDER EFFECT */
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 18px;
-  padding: 1px;
-  background: linear-gradient(120deg, transparent, #E2FE15, transparent);
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.card:hover::before {
-  opacity: 1;
-}
-
-/* HOVER */
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.25s ease;
+  cursor: pointer;
 }
 
 .card img {
@@ -175,14 +110,20 @@ section {
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
-  transition: 0.4s;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border: 1px solid rgba(226,254,21,0.6);
+  box-shadow: 0 10px 30px rgba(226,254,21,0.15);
 }
 
 .card:hover img {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
-/* GALLERY */
+/* ================= WORK ================= */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -190,17 +131,21 @@ section {
 }
 
 .project {
-  position: relative;
   border-radius: 16px;
   overflow: hidden;
-  transition: 0.3s;
+  position: relative;
+  transition: 0.3s ease;
 }
 
 .project img {
   width: 100%;
   height: 260px;
   object-fit: cover;
-  transition: 0.4s;
+  transition: 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
 }
 
 .project:hover img {
@@ -210,8 +155,8 @@ section {
 .overlay {
   position: absolute;
   bottom: 0;
-  padding: 20px;
   width: 100%;
+  padding: 20px;
   background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
   opacity: 0;
   transition: 0.3s;
@@ -221,44 +166,88 @@ section {
   opacity: 1;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 .about-container {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 60px;
+  align-items: center;
 }
 
-/* FOUNDERS */
+.about-highlight {
+  color: #E2FE15;
+  font-weight: bold;
+}
+
+.about-founders {
+  display: flex;
+  gap: 20px;
+}
+
 .founder-card {
-  background: rgba(255,255,255,0.03);
+  flex: 1;
+  text-align: center;
+  background: #1a1a1a;
   padding: 25px;
   border-radius: 16px;
-  text-align: center;
-  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s ease;
+}
+
+.founder-card img {
+  width: 100%;
+  max-width: 160px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.founder-card span {
+  color: #E2FE15;
 }
 
 .founder-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 20px rgba(226,254,21,0.15);
+  transform: translateY(-5px);
 }
 
-/* SCROLL ANIMATION */
-.fade {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.8s ease;
+/* ================= FORM ================= */
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  background: #111;
+  color: white;
 }
 
-.fade.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.4;
 }
 
-</style>
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-founders {
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+}
+
+  </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
   <div><strong>Digital Forge Media</strong></div>
   <div>
@@ -271,106 +260,132 @@ section {
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content fade">
-    <h1>Broadcasts Built to <span>Perform</span></h1>
-    <p>High-performance esports production, live events, and content engineered for scale.</p>
-    <a href="#work" class="cta">View Work</a>
-  </div>
+  <h1>Broadcasts Built to <span>Perform</span></h1>
+  <p>High-performance esports production, live events, and content engineered for scale.</p>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-  <h2 class="fade">What We Do</h2>
+  <h2>What We Do</h2>
 
   <div class="grid">
-    <div class="card fade">
+
+    <div class="card">
       <img src="live-broadcast.png">
       <h3>Live Broadcast</h3>
       <p>Turnkey production engineered for high-performance live environments.</p>
     </div>
 
-    <div class="card fade">
+    <div class="card">
       <img src="live-event-production.png">
       <h3>Live Event Production</h3>
-      <p>From remote setups to full-scale esports events.</p>
+      <p>From remote setups to full-scale esports events, we deliver flawless execution.</p>
     </div>
 
-    <div class="card fade">
+    <div class="card">
       <img src="graphic-example.png">
       <h3>Graphic Design</h3>
-      <p>Custom overlays and broadcast visuals.</p>
+      <p>Custom overlays and broadcast visuals built for impact.</p>
     </div>
 
-    <div class="card fade">
+    <div class="card">
       <img src="replay-example.png">
       <h3>Replay & Observing</h3>
       <p>Capture every moment with precision systems.</p>
     </div>
+
   </div>
 </section>
 
 <!-- WORK -->
 <section id="work">
-  <h2 class="fade">Our Work</h2>
+  <h2>Our Work</h2>
 
   <div class="gallery">
-    <a href="black-ops-7-launch-party.html" class="fade">
+
+    <a href="black-ops-7-launch-party.html">
       <div class="project">
         <img src="monster-screen2.jpg">
         <div class="overlay">
-          <h3>Black Ops 7</h3>
+          <h3>Black Ops 7 Launch Party</h3>
+          <p>Live Event Broadcast</p>
         </div>
       </div>
     </a>
 
-    <a href="nouns-bowl.html" class="fade">
+    <a href="nouns-bowl.html">
       <div class="project">
         <img src="jumbotron.png">
         <div class="overlay">
           <h3>Nouns Bowl</h3>
+          <p>Live Broadcast Production</p>
         </div>
       </div>
     </a>
 
-    <a href="the-boys.html" class="fade">
+    <a href="the-boys.html">
       <div class="project">
         <img src="the-boys-1.png">
         <div class="overlay">
-          <h3>The Boys</h3>
+          <h3>The Boys Stream</h3>
+          <p>Streaming Show Reactions</p>
         </div>
       </div>
     </a>
+
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
+  <h2>About Us</h2>
+
   <div class="about-container">
-    <div class="fade">
-      <h2>About Us</h2>
-      <p>We build high-performance broadcasts at the intersection of gaming and live production.</p>
+
+    <div>
+      <p>Digital Forge Media was founded in 2024 to take control of the work we create and the standard we deliver.</p>
+
+      <p>Operating at the intersection of gaming, live production, and creator culture, we build high-performance broadcasts designed to scale.</p>
+
+      <p>With deep industry experience and a trusted network, we assemble the right team for every job.</p>
+
+      <p class="about-highlight">If it’s not an A+, we don’t put it out.</p>
     </div>
 
-    <div class="fade">
+    <div class="about-founders">
       <div class="founder-card">
         <img src="peter-dager.png">
         <h3>Peter Dager</h3>
+        <span>Co-Founder</span>
+      </div>
+
+      <div class="founder-card">
+        <img src="will-oscar.png">
+        <h3>Will Oscar</h3>
+        <span>Co-Founder</span>
       </div>
     </div>
+
   </div>
 </section>
 
-<script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-});
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Get in Touch</h2>
 
-document.querySelectorAll('.fade').forEach(el => observer.observe(el));
-</script>
+  <form action="https://formspree.io/f/maqaybey" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Tell us about your project"></textarea>
+    <button style="padding:14px 28px; background:#E2FE15; border:none; border-radius:8px;">
+      Submit
+    </button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Digital Forge Media
+</footer>
 
 </body>
 </html>
