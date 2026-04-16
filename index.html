@@ -119,8 +119,14 @@ h2 {
   padding: 20px;
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.05);
-  transition: 0.3s ease;
-  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border: 1px solid rgba(226,254,21,0.6);
+  box-shadow: 0 10px 30px rgba(226,254,21,0.15);
 }
 
 .services-grid .card img {
@@ -142,6 +148,20 @@ h2 {
     0 0 0 1px rgba(226,254,21,0.6),
     0 0 20px rgba(226,254,21,0.25);
 }
+
+    .card h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.card p {
+  opacity: 0.75;
+}
+   
+.card:hover img {
+  transform: scale(1.06);
+}
+
 
 /* GALLERY */
 .gallery {
@@ -291,12 +311,37 @@ footer {
 }
 
 /* BACKGROUND IMAGE */
-.hero-bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.05);
+.hero {
+  padding: 160px 20px 120px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 20%, rgba(226,254,21,0.08), transparent 60%),
+              #0a0a0a;
 }
+
+.hero-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 72px;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #E2FE15;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.7;
+  max-width: 600px;
+  margin: auto;
+}
+
 
 /* DARK OVERLAY */
 .hero-overlay {
@@ -370,11 +415,6 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-
-  <img src="hero-image.png" class="hero-bg">
-
-  <div class="hero-overlay"></div>
-
   <div class="hero-content">
     <h1>
       Broadcasts Built to <span>Perform</span>
@@ -384,7 +424,6 @@ footer {
       High-performance esports production, live events, and content engineered for scale.
     </p>
   </div>
-
 </section>
 
 
