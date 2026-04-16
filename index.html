@@ -271,24 +271,87 @@ footer {
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .hero-image {
-    height: 55vh;
+  .hero {
+    height: 65vh;
   }
 
-  .hero-image img {
-    object-position: center top;
+  .hero-content {
+    left: 20px;
+    right: 20px;
+    bottom: 10%;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
   }
 }
 
-@media (max-width: 900px) {
-  .about-container {
-    grid-template-columns: 1fr;
-  }
+/* BACKGROUND IMAGE */
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+}
 
-  .about-founders {
-    justify-content: center;
+/* DARK OVERLAY */
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.7)
+  );
+}
+
+/* TEXT CONTENT */
+.hero-content {
+  position: absolute;
+  bottom: 15%;
+  left: 8%;
+  max-width: 650px;
+}
+
+/* HEADLINE */
+.hero-content h1 {
+  font-size: 68px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+/* ACCENT WORD */
+.hero-content span {
+  color: #E2FE15;
+}
+
+/* SUBTEXT */
+.hero-content p {
+  font-size: 18px;
+  opacity: 0.85;
+  max-width: 500px;
+}
+
+ .hero-content {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+
+
   </style>
 </head>
 
@@ -306,10 +369,24 @@ footer {
 </nav>
 
 <!-- HERO -->
-<section class="hero-image">
-  <img src="hero-image.png">
+<section class="hero">
+
+  <img src="hero-image.png" class="hero-bg">
+
   <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>
+      Broadcasts Built to <span>Perform</span>
+    </h1>
+
+    <p>
+      High-performance esports production, live events, and content engineered for scale.
+    </p>
+  </div>
+
 </section>
+
 
 <!-- SERVICES -->
 <section id="services">
